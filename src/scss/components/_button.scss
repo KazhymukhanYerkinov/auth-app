@@ -1,0 +1,56 @@
+@import '../variables';
+
+.button {
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 600;
+
+    background-color: $btn-bg-color;
+    transition: background-color .3s linear;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $btn-bg-hover;
+    }
+
+    &__logout {
+        margin-top: 20px;
+        
+        width: 300px;
+        height: 45px;
+
+        color: $white;
+        text-transform: uppercase;
+    }
+
+    &__ok {
+        width: 100px;
+        height: 30px;
+        background-color: $error-color;
+
+        color: $white;
+
+        &:hover {
+            background-color: $danger-btn-bg-hover;
+        }
+    }
+
+    &__cancel {
+        margin-right: 10px;
+
+        width: 100px;
+        height: 30px;
+
+        color: $white;
+    }
+
+    &__submit {
+        margin-top: 15px;
+        
+        color: $white;
+        width: 100%;
+        height: 35px;
+        
+        
+    }
+}

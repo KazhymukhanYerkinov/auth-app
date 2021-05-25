@@ -1,0 +1,17 @@
+.checkbox {
+    cursor: pointer;
+
+    &__text {
+        cursor: pointer;
+        margin-left: 5px;
+        margin-bottom: 2px;
+
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 400;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

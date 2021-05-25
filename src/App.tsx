@@ -1,11 +1,21 @@
-import React from 'react';
-import './App.css';
+import { Provider } from 'react-redux';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Login, MainPage } from './pages';
+import store from './redux/redux-store';
 
-function App() {
+
+
+
+const App = () => {
   return (
-    <div className="App">
-      
-    </div>
+    <BrowserRouter>
+      <Provider store = { store }>
+        <Switch>
+          <Route exact path = '/' render = { () => <MainPage /> } />
+          <Route exact path = '/login' render = { () => <Login /> } />
+        </Switch>
+      </Provider>
+    </BrowserRouter>
   );
 }
 

@@ -1,0 +1,23 @@
+@import '../variables';
+
+.input {
+    width: 100%;
+    height: 35px;
+    margin-top: 12px;
+    padding-left: 7px;
+    border-radius: 3px;
+    border: 1px solid $gray;
+
+    font-size: 13px;
+    
+    &:focus {
+        border-color: $btn-bg-color;
+        background-color: $input-bg-color;
+    }
+    &--error {
+        border-color: $error-color;
+    }
+
+    
+
+}

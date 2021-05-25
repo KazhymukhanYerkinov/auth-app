@@ -1,0 +1,59 @@
+@import '../../scss/variables';
+
+.modal {
+  display: flex;
+
+  width: 100%;
+  height: 100%;
+
+  opacity: 0;
+  visibility: hidden;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.5s ease 0s;
+  background-color: $modal-bg-color;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &.open &__inner {
+    transform: perspective(600px) translate(0px, 0px) rotateX(0);
+    opacity: 1;
+  }
+
+  &__inner {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+
+    border-radius: 3px;
+    padding: 17px 15px;
+    background-color: $white;
+
+    opacity: 1;
+    transition: all 0.5s ease 0s;
+    transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+
+  }
+  &__desc {
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 600;
+  }
+  &__footer {
+    margin-top: 20px;
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
