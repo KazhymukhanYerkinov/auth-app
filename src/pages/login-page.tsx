@@ -1,6 +1,8 @@
 import cls from 'classnames';
 import { Field, Form, Formik } from 'formik';
+import { useDispatch } from 'react-redux';
 import * as Yup from 'yup';
+import { login } from '../redux/auth-reducer';
 
 const validationSchema = Yup.object().shape({
   login: Yup.string()
@@ -17,8 +19,10 @@ const validationSchema = Yup.object().shape({
 
 const Login:React.FC<PropsType> = () => {
 
+  const dispatch = useDispatch();
+
   const onSubmit = (formData: LoginFormType) => {
-    console.log(formData.login, formData.password);
+    dispatch(login(formData.login, formData.password));
   }
 
   return (
