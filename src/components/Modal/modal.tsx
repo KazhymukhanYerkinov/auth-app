@@ -2,10 +2,11 @@ import classNames from 'classnames';
 
 type PropsType = {
   onCloseModal: () => void
+  handleLogout: () => void
   isOpen: boolean
 }
 
-const Modal: React.FC<PropsType> = ({ onCloseModal, isOpen }) => {
+const Modal: React.FC<PropsType> = ({ onCloseModal, isOpen, handleLogout }) => {
 
   const cls = classNames('modal', {'open': isOpen});
 
@@ -17,7 +18,7 @@ const Modal: React.FC<PropsType> = ({ onCloseModal, isOpen }) => {
 
         <div className = 'modal__footer'>
           <button className = 'button button__cancel' onClick = { onCloseModal }> Нет </button>
-          <button className = 'button button__ok'> Да </button>
+          <button className = 'button button__ok' onClick = { handleLogout }> Да </button>
         </div>
         
       </div>
